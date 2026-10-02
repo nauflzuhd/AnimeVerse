@@ -1,6 +1,6 @@
 {
-    "name": "animeverse",
-    "short_name": "animeverse",
+    "name": "iklc_anime_verse",
+    "short_name": "iklc_anime_verse",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
