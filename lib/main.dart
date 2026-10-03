@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:iklc_anime_verse/screens/profile_screen.dart';
+import 'package:iklc_anime_verse/config/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,12 +11,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Anime Verse',
       theme: ThemeData(
         fontFamily: 'Urbanist',
       ),
-      home: const ProfileScreen(),
+      routerConfig: createRouter(),
       debugShowCheckedModeBanner: false,
     );
   }
