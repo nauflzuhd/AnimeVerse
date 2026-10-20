@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:iklc_anime_verse/config/routes.dart';
+import '../config/routes.dart';
 import '../widgets/app_scaffold.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -135,7 +135,7 @@ class SignUpScreen extends StatelessWidget {
                       height: screenHeight * 0.075,
                       child: ElevatedButton.icon(
                         onPressed: () {
-                          context.go(AppRoutes.home);
+                          // TODO: Implement Google sign up functionality
                         },
                         icon: SvgPicture.asset(
                           'assets/images/google_icon.svg',

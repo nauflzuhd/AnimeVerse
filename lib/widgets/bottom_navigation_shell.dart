@@ -4,27 +4,36 @@ import 'package:go_router/go_router.dart';
 class BottomNavigationShell extends StatelessWidget {
   final StatefulNavigationShell navigationShell;
 
+
   const BottomNavigationShell({
     super.key,
-    required this.navigationShell
+    required this.navigationShell,
   });
+
 
   void _onItemTapped(BuildContext context, int index) {
     navigationShell.goBranch(
-      index, 
-      initialLocation: index == navigationShell.currentIndex);
+        index, initialLocation: index == navigationShell.currentIndex);
   }
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery
+        .of(context)
+        .size
+        .width;
+    final screenHeight = MediaQuery
+        .of(context)
+        .size
+        .height;
     final currentIndex = navigationShell.currentIndex;
+
 
     return PopScope(
       canPop: false,
       onPopInvokedWithResult: (didPop, _) async {
         if (didPop) return;
+
 
         if (navigationShell.currentIndex == 0) {
           Navigator.of(context).pop();
@@ -158,6 +167,6 @@ class BottomNavigationShell extends StatelessWidget {
       ),
     );
   }
-}  
+}
 
-  
+
