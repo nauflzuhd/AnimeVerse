@@ -136,7 +136,9 @@ class DetailScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Rating and Episodes info
-                  Row(
+                  Wrap(
+                    spacing: screenWidth * 0.03,
+                    runSpacing: screenHeight * 0.015,
                     children: [
                       // Rating
                       Container(
@@ -169,7 +171,6 @@ class DetailScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(width: screenWidth * 0.05),
                       // Total Episodes
                       Container(
                         padding: EdgeInsets.symmetric(
@@ -193,8 +194,6 @@ class DetailScreen extends StatelessWidget {
                           screenWidth * 0.035, fontWeight: FontWeight.w700),
                         ),
                       ),
-                      SizedBox(width: screenWidth * 0.05),
-
                       //Add to Favorites Button
                       Consumer<AppStateProvider>(
                         builder: (context, favoriteProvider, child) {
